@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ShapeLibrary
 {
-    class Cuboid : Shape3D
+    public class Cuboid : Shape3D
     {
         public override float Volume { get; }
 

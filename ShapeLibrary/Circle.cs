@@ -17,11 +17,12 @@ namespace ShapeLibrary
 
         public Circle(Vector2 center, float radius)
         {
-            Center = new Vector3(center, 0);
-            Radius = radius;
-            Circumference = ((float)(Math.PI * radius * 2));
-            Area = ((float)(Math.PI * Math.Pow(radius, 2)));
+            this.Center = new Vector3(center, 0);
+            this.Radius = radius;
+            this.Circumference = ((float)(Math.PI * radius * 2));
+            this.Area = ((float)(Math.PI * Math.Pow(radius, 2)));
         }
+
         public override string ToString()
         {
             return $"circle @({Center.X}, {Center.Y}): r = {Radius}";
