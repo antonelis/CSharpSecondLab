@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ShapeLibrary
 {
-    class Class1
+    public abstract class Shape2D : Shape
     {
+        public abstract float Circumference { get; }
     }
 }

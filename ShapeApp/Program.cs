@@ -8,8 +8,10 @@ namespace ShapeApp
     {
         static void Main(string[] args)
         {
-            Vector2 v2 = new Vector2(5.0f, 2.4f);
-            Console.WriteLine(v2.X);
+          
+            Console.WriteLine(new Circle(new Vector2(3.0f,4.0f),2.0f));
+
+          
         }
     }
 }

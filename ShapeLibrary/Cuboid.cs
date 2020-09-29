@@ -5,12 +5,13 @@ using System.Text;
 
 namespace ShapeLibrary
 {
-    class Rectangle : Shape2D
+    class Cuboid : Shape3D
     {
-        public override float Circumference { get; }
+        public override float Volume { get; }
 
         public override Vector3 Center { get; }
 
         public override float Area { get; }
+
     }
 }
