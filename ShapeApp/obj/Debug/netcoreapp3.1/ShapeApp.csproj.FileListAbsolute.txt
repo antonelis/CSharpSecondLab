@@ -1,0 +1,16 @@
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\bin\Debug\netcoreapp3.1\ShapeApp.exe
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\bin\Debug\netcoreapp3.1\ShapeApp.deps.json
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\bin\Debug\netcoreapp3.1\ShapeApp.runtimeconfig.json
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\bin\Debug\netcoreapp3.1\ShapeApp.runtimeconfig.dev.json
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\bin\Debug\netcoreapp3.1\ShapeApp.dll
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\bin\Debug\netcoreapp3.1\ShapeApp.pdb
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\bin\Debug\netcoreapp3.1\ShapeLibrary.dll
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\bin\Debug\netcoreapp3.1\ShapeLibrary.pdb
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\obj\Debug\netcoreapp3.1\ShapeApp.csprojAssemblyReference.cache
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\obj\Debug\netcoreapp3.1\ShapeApp.AssemblyInfoInputs.cache
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\obj\Debug\netcoreapp3.1\ShapeApp.AssemblyInfo.cs
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\obj\Debug\netcoreapp3.1\ShapeApp.csproj.CoreCompileInputs.cache
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\obj\Debug\netcoreapp3.1\ShapeApp.csproj.CopyComplete
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\obj\Debug\netcoreapp3.1\ShapeApp.dll
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\obj\Debug\netcoreapp3.1\ShapeApp.pdb
+C:\Users\anton\source\repos\CSharpLab2\ShapeApp\obj\Debug\netcoreapp3.1\ShapeApp.genruntimeconfig.cache
