@@ -25,7 +25,7 @@ namespace ShapeLibrary
 
         public override string ToString()
         {
-            return $"circle @({Center.X}, {Center.Y}): r = {Radius}";
+            return $"Circle @({Center.X}, {Center.Y}): r = {Radius}";
         }
     }
 }

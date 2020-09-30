@@ -47,7 +47,7 @@ namespace ShapeLibrary
 
         public override string ToString()
         {
-            return $"rectangle @({Center.X}, {Center.Y}): w = {Size.X}, h = {Size.Y}, IsSquare: {IsSquare}";
+            return $"Rectangle @({Center.X}, {Center.Y}): w = {Size.X}, h = {Size.Y}, IsSquare: {IsSquare}";
         }
     }
 }
