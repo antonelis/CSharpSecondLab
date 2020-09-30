@@ -14,29 +14,35 @@ namespace ShapeLibrary
 
         public override float Area { get; }
 
-        public Vector2 FirstCorner { get; }
-        public Vector2 SecondCorner { get; }
-        public Vector2 ThirdCorner { get; }
+        public Vector2 CornerA { get; }
+        public Vector2 CornerB { get; }
+        public Vector2 CornerC { get; }
 
         public Triangle(Vector2 p1, Vector2 p2, Vector2 p3)
         {
-            this.FirstCorner = new Vector2(p1.X, p1.Y);
-            this.SecondCorner = new Vector2(p2.X, p2.Y);
-            this.ThirdCorner = new Vector2(p3.X, p3.Y);
+            this.CornerA = new Vector2(p1.X, p1.Y);
+            this.CornerB = new Vector2(p2.X, p2.Y);
+            this.CornerC = new Vector2(p3.X, p3.Y);
 
-            // https://www.youtube.com/watch?list=PLshJtXCW6HtWsl-thJ6LWBRGTwP3GdWJx&time_continue=8&v=weW3SHQ9K8g&feature=emb_logo
-            float FirstSideWithFirstAndSecondCorner = (float)Math.Sqrt((float)Math.Pow((p2.X - p1.X), 2) + (float)Math.Pow((p2.Y - p1.Y),2));
-            float SecondSideWithSecondAndThirdCorner = (float)Math.Sqrt((float)Math.Pow((p3.X - p2.X), 2) + (float)Math.Pow((p3.Y - p2.Y), 2));
-            float ThirdSideWithThirdAndFirstCorner = (float)Math.Sqrt((float)Math.Pow((p1.X - p3.X), 2) + (float)Math.Pow((p1.Y - p3.Y), 2));
+            float DistanceAtoB = (float)Math.Sqrt((float)Math.Pow((p2.X - p1.X), 2) + (float)Math.Pow((p2.Y - p1.Y), 2));
+            float DistanceBtoC = (float)Math.Sqrt((float)Math.Pow((p3.X - p2.X), 2) + (float)Math.Pow((p3.Y - p2.Y), 2));
+            float DistanceCtoA = (float)Math.Sqrt((float)Math.Pow((p1.X - p3.X), 2) + (float)Math.Pow((p1.Y - p3.Y), 2));
 
-            Circumference = FirstSideWithFirstAndSecondCorner + SecondSideWithSecondAndThirdCorner + ThirdSideWithThirdAndFirstCorner;
+            Circumference = DistanceAtoB + DistanceBtoC + DistanceCtoA;
+
             var SemiParameter = Circumference / 2;
 
-            this.Area = (float)Math.Sqrt(SemiParameter * (SemiParameter - FirstSideWithFirstAndSecondCorner) * (SemiParameter - SecondSideWithSecondAndThirdCorner) * (SemiParameter - ThirdSideWithThirdAndFirstCorner));
+            this.Area = (float)Math.Sqrt(SemiParameter * (SemiParameter - DistanceAtoB) * (SemiParameter - DistanceBtoC) * (SemiParameter - DistanceCtoA));
 
-            // Center
+            // Center  Ox = (Ax + Bx + Cx)/3 and Oy = (Ay + By + Cy)/3.
 
+            Center = new Vector3((p1.X + p2.X + p3.X) / 3, (p1.Y + p2.Y + p3.Y) / 3, 0);
 
+        }
+        public override string ToString()
+        {
+            return $"Triangle @({Center.X}, {Center.Y}): p1({CornerA.X}, {CornerA.Y}), p2({CornerB.X}, {CornerB.Y}), p3({CornerC.X}. {CornerC.Y})";
         }
     }
 }
+
