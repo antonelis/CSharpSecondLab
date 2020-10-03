@@ -11,7 +11,7 @@ namespace ShapeLibrary
         public static float RandomFloat()
         {
             Random rnd = new Random();
-            float rndFloat = rnd.Next(10, 31) * .1f;
+            float rndFloat = rnd.Next(10, 100) * .1f;
             return rndFloat;
         }
         public static Shape GenerateShape()

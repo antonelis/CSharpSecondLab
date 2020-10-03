@@ -41,7 +41,7 @@ namespace ShapeLibrary
         }
         public override string ToString()
         {
-            return $"Triangle @({Center.X}, {Center.Y}): p1({CornerA.X}, {CornerA.Y}), p2({CornerB.X}, {CornerB.Y}), p3({CornerC.X}. {CornerC.Y})";
+            return $"Triangle @({Center.X:F1}, {Center.Y:F1}): p1({CornerA.X:F1}, {CornerA.Y:F1}), p2({CornerB.X:F1}, {CornerB.Y:F1}), p3({CornerC.X:F1}. {CornerC.Y:F1})";
         }
     }
 }

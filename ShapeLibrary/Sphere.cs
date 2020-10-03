@@ -25,7 +25,7 @@ namespace ShapeLibrary
         }
         public override string ToString()
         {
-            return $"Sphere @({Center.X}, {Center.Y}, {Center.Z}): r = {Radius}";
+            return $"Sphere @({Center.X:F1}, {Center.Y:F1}, {Center.Z:F1}): r = {Radius:F1}";
         }
     }
 }

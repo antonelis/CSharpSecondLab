@@ -13,17 +13,17 @@ namespace ShapeLibrary
 
         public override float Area { get; }
         public Vector2 Size { get; }
-        public bool IsSquare
+        public string IsSquare
         {
             get
             {
                 if (Size.X == Size.Y)
                 {
-                    return true;
+                    return "Square!";
                 }
                 else
                 {
-                    return false;
+                    return "";
                 }
             }
         }
@@ -47,7 +47,7 @@ namespace ShapeLibrary
 
         public override string ToString()
         {
-            return $"Rectangle @({Center.X}, {Center.Y}): w = {Size.X}, h = {Size.Y}, IsSquare: {IsSquare}";
+            return $"Rectangle @({Center.X:F1}, {Center.Y:F1}): w = {Size.X:F1}, h = {Size.Y:F1}, {IsSquare}";
         }
     }
 }

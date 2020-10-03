@@ -45,7 +45,7 @@ namespace ShapeLibrary
         }
         public override string ToString()
         {
-            return $"Cuboid @({Center.X}, {Center.Y}, {Center.Z}): w = {Size.X}, h = {Size.Y}, l = {Size.Z} {IsCube}";
+            return $"Cuboid @({Center.X:F1}, {Center.Y:F1}, {Center.Z:F1}): w = {Size.X:F1}, h = {Size.Y:F1}, l = {Size.Z:F1} {IsCube}";
         }
 
     }
