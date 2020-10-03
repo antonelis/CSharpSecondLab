@@ -10,13 +10,14 @@ namespace ShapeApp
         static void Main(string[] args)
         {
 
-            Console.WriteLine(new Circle(new Vector2(3.0f, 4.0f), 2.0f));
+          /*  Console.WriteLine(new Circle(new Vector2(3.0f, 4.0f), 2.0f));
             Console.WriteLine(new Rectangle(new Vector2(3.0f, 4.0f), 4.0f));
             Console.WriteLine(new Rectangle(new Vector2(3.0f, 4.0f), new Vector2(3.0f, 4.0f)));
             Console.WriteLine(new Triangle(new Vector2(0.0f, 0.0f), new Vector2(3.0f, 3.0f), new Vector2(6.0f, 0.0f)));
             Console.WriteLine(new Cuboid(new Vector3(3.0f, 4.0f, 5.0f), (new Vector3(4.0f, 5.0f, 2.0f))));
             Console.WriteLine(new Cuboid(new Vector3(3.0f, 4.0f, 5.0f), 3.0f));
             Console.WriteLine(new Sphere(new Vector3(0.0f, 1.0f, 0.0f), 3.2f));
+          */
 
             Console.WriteLine("--------------------------------------------------------------------");
 
@@ -54,6 +55,22 @@ namespace ShapeApp
             avgArea = sumOfArea / shapes.Count;
             Console.WriteLine($"Genomsnittliga arean av alla Shapes i listan -> {avgArea:F1}");
             Console.WriteLine("--------------------------------------------------------------------");
+
+            float largestVolumeShape = 0.0f;
+            foreach (Shape shape in shapes)
+            {
+                if (shape is Shape3D v)
+                {
+                    if (v.Volume > largestVolumeShape)
+                    {
+
+                        largestVolumeShape = v.Volume;
+                    }
+                }
+            }
+            Console.WriteLine($"Shape3D som har störst volym av alla i listan -> {largestVolumeShape:F1}");
+            Console.WriteLine("--------------------------------------------------------------------");
+
         }
     }
 }
