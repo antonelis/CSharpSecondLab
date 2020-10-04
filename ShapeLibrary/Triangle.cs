@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using System.Security.Cryptography;
@@ -6,13 +7,15 @@ using System.Text;
 
 namespace ShapeLibrary
 {
-    public class Triangle : Shape2D
+    public class Triangle : Shape2D, IEnumerable
     {
         public override float Circumference { get; }
 
         public override Vector3 Center { get; }
 
         public override float Area { get; }
+
+        private Vector2[] vectors; 
 
         public Vector2 CornerA { get; }
         public Vector2 CornerB { get; }
@@ -23,7 +26,7 @@ namespace ShapeLibrary
             this.CornerA = new Vector2(p1.X, p1.Y);
             this.CornerB = new Vector2(p2.X, p2.Y);
             this.CornerC = new Vector2(p3.X, p3.Y);
-
+            vectors = new []{p1,p2,p3};
             float DistanceAtoB = (float)Math.Sqrt((float)Math.Pow((p2.X - p1.X), 2) + (float)Math.Pow((p2.Y - p1.Y), 2));
             float DistanceBtoC = (float)Math.Sqrt((float)Math.Pow((p3.X - p2.X), 2) + (float)Math.Pow((p3.Y - p2.Y), 2));
             float DistanceCtoA = (float)Math.Sqrt((float)Math.Pow((p1.X - p3.X), 2) + (float)Math.Pow((p1.Y - p3.Y), 2));
@@ -42,6 +45,11 @@ namespace ShapeLibrary
         public override string ToString()
         {
             return $"Triangle @({Center.X:F1}, {Center.Y:F1}): p1({CornerA.X:F1}, {CornerA.Y:F1}), p2({CornerB.X:F1}, {CornerB.Y:F1}), p3({CornerC.X:F1}. {CornerC.Y:F1})";
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return vectors.GetEnumerator();
         }
     }
 }
